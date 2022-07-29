@@ -17,3 +17,15 @@ def get_greeting_db():
     greeting = cursor.fetchone()
     conn.close()
     return greeting
+
+# import .bak file to restore database
+def load_db():
+    """
+    Loads the database from a .bak file.
+    """
+    conn = sqlite3.connect("hello_world.db")
+    cursor = conn.cursor()
+    cursor.execute("ATTACH DATABASE 'hello_world.bak' AS backup")
+    conn.commit()
+    conn.close()
+    return
