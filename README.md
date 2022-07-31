@@ -1,2 +1,2 @@
 # a-bad-mono-repo
-An example of a bad monorepo. 
+An example of monorepo that contains binaries with multiple changes made to it. 
